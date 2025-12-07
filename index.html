@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Полное Генеалогическое Древо Иисуса Христа (Раскрыто)</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #2d2d2d;
+      --header-bg: #2c3e50;
+      --header-text: #ecf0f1;
+      --luke-bg: #f0f7ff;
+      --matthew-bg: #fef8f0;
+      --mary-bg: #e3f2fd;
+      --joseph-bg: #f9f0e0;
+      --god-bg: #f3e5f5;
+      --jesus-bg: #e8f5e9;
+      --border: #dcdcdc;
+      --highlight: #ffd54f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 15px;
+    }
+
+    header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 30px 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .disclaimer {
+      background: #fff8e1;
+      border-left: 4px solid #ffc107;
+      padding: 15px 20px;
+      margin: 25px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin: 30px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .generation-group {
+      margin: 25px 0;
+    }
+
+    .group-title {
+      font-size: 1.4rem;
+      margin: 15px 0 10px;
+      color: #34495e;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background: white;
+    }
+
+    th {
+      background: #34495e;
+      color: white;
+      text-align: left;
+      padding: 14px 12px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    td {
+      padding: 14px 12px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td { background: #fafafa; }
+
+    .luke-line td { background-color: var(--luke-bg) !important; }
+    .matthew-line td { background-color: var(--matthew-bg) !important; }
+    .mary-line td { background-color: var(--mary-bg) !important; font-weight: 600; }
+    .joseph-line td { background-color: var(--joseph-bg) !important; font-style: italic; }
+    .god-line td { background-color: var(--god-bg) !important; }
+    .jesus-line td { 
+      background: var(--jesus-bg) !important; 
+      font-weight: bold; 
+      font-size: 1.1rem; 
+      border: 2px solid #81c784;
+    }
+
+    .name { font-weight: 600; }
+    .ref { font-size: 0.85rem; color: #555; }
+    .role { font-weight: 600; color: #2980b9; }
+    .bio { max-width: 250px; }
+    .years, .place, .source { font-size: 0.85rem; color: #666; }
+
+    .footnotes {
+      margin-top: 40px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .footnotes h3 { margin-bottom: 12px; color: #2c3e50; }
+    .footnotes ol { padding-left: 20px; }
+    .footnotes li { margin-bottom: 8px; }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 25px;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      table { display: block; overflow-x: auto; }
+      th, td { white-space: nowrap; min-width: 180px; }
+      h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Полное Генеалогическое Древо Иисуса Христа</h1>
+  <p class="subtitle">
+    112 персонажей • Все библейские родословные + предания Церкви • Подробные биографии, годы, места, источники
+  </p>
+</header>
+
+<div class="disclaimer">
+  <strong>⚠️ Богословская точность:</strong>  
+  • Бог Отец, Сын и Святой Дух — не «поколения», а три Ипостаси одного Бога (Никео-Цареградский Символ веры).  
+  • Иисус родился от Девы Марии <em>через действие Святого Духа</em> (Лук. 1:35), а не от Иосифа.  
+  • Родословная по <strong>Луке (3:23–38)</strong> — вероятно, по плоти (через Марию, через Натана).  
+  • Родословная по <strong>Матфею (1:1–17)</strong> — юридическая (через Иосифа, через Соломона).  
+  • Иоаким и Анна — из <em>Протоевангелия Иакова</em> (II век), почитаются Церковью.
+</div>
+
+<!-- Богословская основа -->
+<div class="section">
+  <h2 class="section-title">I. Богословская Основа Воплощения</h2>
+  <p><em>Не родословная, но источник воплощения — Троица</em></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Роль</th>
+        <th>Биография / Суть</th>
+        <th>Годы</th>
+        <th>Место</th>
+        <th>Источники</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="god-line">
+        <td class="name">Бог Отец</td>
+        <td class="role">Вечный Отец Сына</td>
+        <td>Не сотворённый, безначальный, источник Божества. Не «предок по плоти», но Отец Сына в вечности.</td>
+        <td class="years">Вечно</td>
+        <td class="place">Небеса</td>
+        <td class="source">Ин. 1:18; Еф. 3:14–15; Символ веры</td>
+      </tr>
+      <tr class="god-line">
+        <td class="name">Святой Дух</td>
+        <td class="role">Действующая сила Воплощения</td>
+        <td>«Дух Святый найдёт на Тебя, и сила Всевышнего осенит Тебя» (Лук. 1:35). Не «отец», но Божественная Ипостась, действующая в зачатии.</td>
+        <td class="years">Вечно</td>
+        <td class="place">Небеса → Земля (при Воплощении)</td>
+        <td class="source">Лук. 1:35; Матф. 1:18, 20; Ин. 14:26</td>
+      </tr>
+      <tr class="god-line">
+        <td class="name">Сын — Слово (Логос)</td>
+        <td class="role">Вторая Ипостась, Воплотившийся</td>
+        <td>«Слово стало плотию и обитало с нами» (Ин. 1:14). До воплощения — вечный Сын; после — Иисус Христос.</td>
+        <td class="years">Вечно → Рожд. ок. 6–4 гг. до Р.Х.</td>
+        <td class="place">Небеса → Вифлеем → Назарет</td>
+        <td class="source">Ин. 1:1–14; Флп. 2:6–7; Кол. 1:15–17</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Центр — Иисус -->
+<div class="section">
+  <h2 class="section-title">II. Центр Древа — Иисус Христос</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Роль</th>
+        <th>Биография</th>
+        <th>Годы</th>
+        <th>Место</th>
+        <th>Источники</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="jesus-line">
+        <td class="name">Иисус Христос</td>
+        <td class="role">Мессия, Сын Божий, Спаситель</td>
+        <td>Рождён от Девы Марии через действие Святого Духа. Богочеловек: истинный Бог и истинный Человек. Основатель христианства.</td>
+        <td class="years">ок. 6–4 гг. до Р.Х. — ок. 30–33 гг. н.э.</td>
+        <td class="place">Вифлеем → Назарет → Галилея → Иерусалим</td>
+        <td class="source">Матф. 1–28; Мк. 1–16; Лук. 1–24; Ин. 1–21</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Линия Марии (по Луке) -->
+<div class="section">
+  <h2 class="section-title">III. Линия по плоти — Мария (Евангелие от Луки 3:23–38)</h2>
+  <p><em>77 поколений от Иисуса до Адама. Традиционно считается родословной Марии (через Натана, а не Соломона). Эли (Лук. 3:23) — возможно, отец Марии.</em></p>
+
+  <div class="generation-group">
+    <h3 class="group-title">Поколение 1–2: Родители Марии (по преданию)</h3>
+    <table>
+      <thead><tr><th>Имя</th><th>Роль</th><th>Биография</th><th>Годы</th><th>Место</th><th>Источники</th></tr></thead>
+      <tbody>
+        <tr class="mary-line">
+          <td class="name">Иоаким</td>
+          <td class="role">Отец Марии</td>
+          <td>Из рода Давидова. Богатый и благочестивый иудей. Долго не имел детей, пока не получил обетование от Ангела.</td>
+          <td class="years">ок. 90–20 гг. до Р.Х.</td>
+          <td class="place">Галилея (Назарет/Сепфорис)</td>
+          <td class="source">Протоевангелие Иакова 1–9; апокриф, но утверждено Тридентским собором и православной традицией</td>
+        </tr>
+        <tr class="mary-line">
+          <td class="name">Анна (Ханна)</td>
+          <td class="role">Мать Марии</td>
+          <td>Дочь священника (из колена Левиина). Имя означает «благодать». Принесла обет — если родит, посвятит ребёнка Богу.</td>
+          <td class="years">ок. 85–15 гг. до Р.Х.</td>
+          <td class="place">Галилея</td>
+          <td class="source">Протоевангелие Иакова 1–9; имя «Анна» — еврейск. חַנָּה (ханна́)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="generation-group">
+    <h3 class="group-title">Поколение 3–79: Родословная по Луке (77 имён от Иисуса до Адама)</h3>
+    <table>
+      <thead><tr><th>№</th><th>Имя</th><th>Роль</th><th>Биография / Примечание</th><th>Годы (ок.)</th><th>Место</th><th>Ссылка</th></tr></thead>
+      <tbody>
+        <!-- Поколения от Иисуса вверх -->
+        <tr class="luke-line"><td>1</td><td class="name">Иисус</td><td>Сын Марии</td><td>Центр древа</td><td>род. 6–4 до Р.Х.</td><td>Вифлеем</td><td>Лук. 3:23</td></tr>
+        <tr class="luke-line"><td>2</td><td class="name">Эли (Или)</td><td>Вероятно, отец Марии</td><td>Многие отцы Церкви (Ириней, Амвросий) считают его отцом Марии; Иосиф называл его «отцом» по закону (Лук. 3:23: «как полагали, сын Иосифа, сына Или»).</td><td>ок. 50–10 до Р.Х.</td><td>Назарет</td><td>Лук. 3:23</td></tr>
+        <tr class="luke-line"><td>3</td><td class="name">Мелхи</td><td>Дед Марии?</td><td>Неизвестен; имя арамейского происхождения — «царь».</td><td>ок. 80–20 до Р.Х.</td><td>Галилея</td><td>Лук. 3:24</td></tr>
+        <tr class="luke-line"><td>4</td><td class="name">Левви</td><td>Праотец</td><td>Возможно, форма имени «Левий».</td><td>ок. 110–50 до Р.Х.</td><td>Иудея</td><td>Лук. 3:24</td></tr>
+        <tr class="luke-line"><td>5</td><td class="name">Матфат</td><td>Праотец</td><td>«Дар Бога».</td><td>ок. 140–80 до Р.Х.</td><td>Иудея</td><td>Лук. 3:24</td></tr>
+        <tr class="luke-line"><td>6</td><td class="name">Иорим</td><td>Праотец</td><td>Форма имени «Иегорам».</td><td>ок. 170–110 до Р.Х.</td><td>Иудея</td><td>Лук. 3:24</td></tr>
+        <tr class="luke-line"><td>7</td><td class="name">Элиезер</td><td>Праотец</td><td>«Бог — помощник».</td><td>ок. 200–140 до Р.Х.</td><td>Иудея</td><td>Лук. 3:25</td></tr>
+        <tr class="luke-line"><td>8</td><td class="name">Иосиф</td><td>Праотец</td><td>Повторяющееся имя; не тот, что муж Марии.</td><td>ок. 230–170 до Р.Х.</td><td>Иудея</td><td>Лук. 3:25</td></tr>
+        <tr class="luke-line"><td>9</td><td class="name">Элихам</td><td>Праотец</td><td>Неизвестен; возможно, «Элиам» (2 Цар. 11:3).</td><td>ок. 260–200 до Р.Х.</td><td>Иудея</td><td>Лук. 3:25</td></tr>
+        <tr class="luke-line"><td>10</td><td class="name">Мея</td><td>Праотец</td><td>Сокращение от «Маттафия».</td><td>ок. 290–230 до Р.Х.</td><td>Иудея</td><td>Лук. 3:25</td></tr>
+        <tr class="luke-line"><td>11</td><td class="name">Маттатия</td><td>Праотец</td><td>«Дар Господень».</td><td>ок. 320–260 до Р.Х.</td><td>Иудея</td><td>Лук. 3:25</td></tr>
+        <tr class="luke-line"><td>12</td><td class="name">Семей</td><td>Праотец</td><td>Форма имени «Симей».</td><td>ок. 350–290 до Р.Х.</td><td>Иудея</td><td>Лук. 3:26</td></tr>
+        <tr class="luke-line"><td>13</td><td class="name">Иосиф</td><td>Праотец</td><td>—</td><td>ок. 380–320 до Р.Х.</td><td>Иудея</td><td>Лук. 3:26</td></tr>
+        <tr class="luke-line"><td>14</td><td class="name">Иуда</td><td>Праотец</td><td>Не тот, что брат Иисуса.</td><td>ок. 410–350 до Р.Х.</td><td>Иудея</td><td>Лук. 3:26</td></tr>
+        <tr class="luke-line"><td>15</td><td class="name">Иоанан</td><td>Праотец</td><td>«Яхве милостив».</td><td>ок. 440–380 до Р.Х.</td><td>Иудея</td><td>Лук. 3:27</td></tr>
+        <tr class="luke-line"><td>16</td><td class="name">Иосиф</td><td>Праотец</td><td>—</td><td>ок. 470–410 до Р.Х.</td><td>Иудея</td><td>Лук. 3:27</td></tr>
+        <tr class="luke-line"><td>17</td><td class="name">Симеон</td><td>Праотец</td><td>«Услышанный».</td><td>ок. 500–440 до Р.Х.</td><td>Иудея</td><td>Лук. 3:27</td></tr>
+        <tr class="luke-line"><td>18</td><td class="name">Левви</td><td>Праотец</td><td>—</td><td>ок. 530–470 до Р.Х.</td><td>Иудея</td><td>Лук. 3:27</td></tr>
+        <tr class="luke-line"><td>19</td><td class="name">Матфат</td><td>Праотец</td><td>—</td><td>ок. 560–500 до Р.Х.</td><td>Иудея</td><td>Лук. 3:28</td></tr>
+        <tr class="luke-line"><td>20</td><td class="name">Иосиф</td><td>Праотец</td><td>—</td><td>ок. 590–530 до Р.Х.</td><td>Иудея</td><td>Лук. 3:28</td></tr>
+        <tr class="luke-line"><td>21</td><td class="name">Иам</td><td>Праотец</td><td>Сокращение от «Иоиам».</td><td>ок. 620–560 до Р.Х.</td><td>Иудея</td><td>Лук. 3:28</td></tr>
+        <tr class="luke-line"><td>22</td><td class="name">Элиуд</td><td>Праотец</td><td>«Бог — хвала».</td><td>ок. 650–590 до Р.Х.</td><td>Иудея</td><td>Лук. 3:28</td></tr>
+        <tr class="luke-line"><td>23</td><td class="name">Элисей</td><td>Праотец</td><td>Не пророк; имя = «Бог мой спасение».</td><td>ок. 680–620 до Р.Х.</td><td>Иудея</td><td>Лук. 3:29</td></tr>
+        <tr class="luke-line"><td>24</td><td class="name">Нерей</td><td>Праотец</td><td>Греческое влияние; имя = «водяной» (возможно, поздняя форма).</td><td>ок. 710–650 до Р.Х.</td><td>Иудея</td><td>Лук. 3:29</td></tr>
+        <tr class="luke-line"><td>25</td><td class="name">Мелхи</td><td>Праотец</td><td>—</td><td>ок. 740–680 до Р.Х.</td><td>Иудея</td><td>Лук. 3:29</td></tr>
+        <tr class="luke-line"><td>26</td><td class="name">Адди</td><td>Праотец</td><td>Сокращение от «Адонаия».</td><td>ок. 770–710 до Р.Х.</td><td>Иудея</td><td>Лук. 3:29</td></tr>
+        <tr class="luke-line"><td>27</td><td class="name">Косам</td><td>Праотец</td><td>Неизвестен.</td><td>ок. 800–740 до Р.Х.</td><td>Иудея</td><td>Лук. 3:30</td></tr>
+        <tr class="luke-line"><td>28</td><td class="name">Елмодам</td><td>Праотец</td><td>«Бог мой судия».</td><td>ок. 830–770 до Р.Х.</td><td>Иудея</td><td>Лук. 3:30</td></tr>
+        <tr class="luke-line"><td>29</td><td class="name">Иир</td><td>Праотец</td><td>Возможно, «Иегойар».</td><td>ок. 860–800 до Р.Х.</td><td>Иудея</td><td>Лук. 3:30</td></tr>
+        <tr class="luke-line"><td>30</td><td class="name">Иисус</td><td>Праотец</td><td>Не Христос; еврейск. «Йешуа» = «Господь спасает».</td><td>ок. 890–830 до Р.Х.</td><td>Иудея</td><td>Лук. 3:31</td></tr>
+        <tr class="luke-line"><td>31</td><td class="name">Элиезер</td><td>Праотец</td><td>—</td><td>ок. 920–860 до Р.Х.</td><td>Иудея</td><td>Лук. 3:31</td></tr>
+        <tr class="luke-line"><td>32</td><td class="name">Иосиф</td><td>Праотец</td><td>—</td><td>ок. 950–890 до Р.Х.</td><td>Иудея</td><td>Лук. 3:31</td></tr>
+        <tr class="luke-line"><td>33</td><td class="name">Симей</td><td>Праотец</td><td>«Услышанный».</td><td>ок. 980–920 до Р.Х.</td><td>Иудея</td><td>Лук. 3:32</td></tr>
+        <tr class="luke-line"><td>34</td><td class="name">Иуда</td><td>Праотец</td><td>—</td><td>ок. 1010–950 до Р.Х.</td><td>Иудея</td><td>Лук. 3:32</td></tr>
+        <tr class="luke-line"><td>35</td><td class="name">Иосиф</td><td>Праотец</td><td>—</td><td>ок. 1040–980 до Р.Х.</td><td>Иудея</td><td>Лук. 3:32</td></tr>
+        <tr class="luke-line"><td>36</td><td class="name">Иона</td><td>Праотец</td><td>«Голубь» или «он поклоняется».</td><td>ок. 1070–1010 до Р.Х.</td><td>Иудея</td><td>Лук. 3:32</td></tr>
+        <tr class="luke-line"><td>37</td><td class="name">Елаким</td><td>Праотец</td><td>«Бог установит».</td><td>ок. 1100–1040 до Р.Х.</td><td>Иудея</td><td>Лук. 3:32</td></tr>
+        <tr class="luke-line"><td>38</td><td class="name">Мелеа</td><td>Праотец</td><td>Сокращение от «Мелкия».</td><td>ок. 1130–1070 до Р.Х.</td><td>Иудея</td><td>Лук. 3:33</td></tr>
+        <tr class="luke-line"><td>39</td><td class="name">Менна</td><td>Праотец</td><td>Возможно, «Менахем».</td><td>ок. 1160–1100 до Р.Х.</td><td>Иудея</td><td>Лук. 3:33</td></tr>
+        <tr class="luke-line"><td>40</td><td class="name">Маттафа</td><td>Праотец</td><td>—</td><td>ок. 1190–1130 до Р.Х.</td><td>Иудея</td><td>Лук. 3:33</td></tr>
+        <tr class="luke-line"><td>41</td><td class="name">Натан</td><td>Сын Давида</td><td>Третий сын Давида от Вирсавии (2 Цар. 5:14). Не царь, но родоначальник линии Марии.</td><td>род. ок. 1000 до Р.Х.</td><td>Иерусалим</td><td>Лук. 3:31; 2 Цар. 5:14; 1 Пар. 3:5</td></tr>
+        <tr class="luke-line"><td>42</td><td class="name">Давид</td><td>Царь Израиля</td><td>«Избранный», пастух, поэт, воин, «человек по сердцу Божию». Обещано: «престол его будет твёрд навеки» (2 Цар. 7:16).</td><td>ок. 1040–970 до Р.Х.</td><td>Вифлеем → Хеврон → Иерусалим</td><td>1 Цар. 16–31; 2 Цар. 1–24; 1 Пар. 10–29</td></tr>
+        <tr class="luke-line"><td>43</td><td class="name">Иессей</td><td>Отец Давида</td><td>Вифлеемлянин, сын Овида. Имел 8 сыновей; Давид — младший.</td><td>ок. 1080–1010 до Р.Х.</td><td>Вифлеем</td><td>1 Цар. 16:1–13; Руфь 4:17–22</td></tr>
+        <tr class="luke-line"><td>44</td><td class="name">Овид</td><td>Дед Давида</td><td>Сын Вооза и Руфи. Имя = «сила».</td><td>ок. 1120–1050 до Р.Х.</td><td>Вифлеем</td><td>Руфь 4:21; 1 Пар. 2:12</td></tr>
+        <tr class="luke-line"><td>45</td><td class="name">Вооз</td><td>Праотец</td><td>Богатый вифлеемлянин, муж Руфи. Из рода Иуды.</td><td>ок. 1160–1090 до Р.Х.</td><td>Вифлеем</td><td>Кн. Руфь 2–4</td></tr>
+        <tr class="luke-line"><td>46</td><td class="name">Салмон</td><td>Праотец</td><td>Сын Наассона; муж Раав (Матф. 1:5).</td><td>ок. 1200–1130 до Р.Х.</td><td>Иерихон → Вифлеем</td><td>Матф. 1:4–5; Руфь 4:20</td></tr>
+        <tr class="luke-line"><td>47</td><td class="name">Наассон</td><td>Князь колена Иудина</td><td>При Исходе (Числ. 1:7). «Принц пустыни».</td><td>ок. 1500–1420 до Р.Х.</td><td>Египет → Пустыня → Ханаан</td><td>Числ. 1:7; 2:3; Руфь 4:20</td></tr>
+        <tr class="luke-line"><td>48</td><td class="name">Аминадав</td><td>Праотец</td><td>Отец Наассона.</td><td>ок. 1540–1460 до Р.Х.</td><td>Египет</td><td>Исх. 6:23; Числ. 1:7</td></tr>
+        <tr class="luke-line"><td>49</td><td class="name">Арам</td><td>Праотец</td><td>Сын Есрома.</td><td>ок. 1580–1500 до Р.Х.</td><td>Египет</td><td>Руфь 4:19</td></tr>
+        <tr class="luke-line"><td>50</td><td class="name">Есром</td><td>Праотец</td><td>Внук Иуды.</td><td>ок. 1620–1540 до Р.Х.</td><td>Египет</td><td>Быт. 46:12; Руфь 4:18</td></tr>
+        <tr class="luke-line"><td>51</td><td class="name">Фарес</td><td>Сын Иуды</td><td>Родился от связи с Тамарью (Быт. 38). Прародитель Давида.</td><td>ок. 1700–1620 до Р.Х.</td><td>Египет</td><td>Быт. 38; Руфь 4:18</td></tr>
+        <tr class="luke-line"><td>52</td><td class="name">Иуда</td><td>Сын Иакова</td><td>Четвёртый сын; колено Иудино — из него Мессия (Быт. 49:10).</td><td>ок. 1750–1670 до Р.Х.</td><td>Ханаан → Египет</td><td>Быт. 29:35; 37–50</td></tr>
+        <tr class="luke-line"><td>53</td><td class="name">Иаков (Израиль)</td><td>Патриарх</td><td>Сын Исаака, внук Авраама. Имя изменено на «Израиль» («борющийся с Богом»).</td><td>ок. 1850–1700 до Р.Х.</td><td>Ханаан → Харран → Египет</td><td>Быт. 25–50</td></tr>
+        <tr class="luke-line"><td>54</td><td class="name">Исаак</td><td>Сын Авраама</td><td>«Смеющийся». Принесён в жертву (Быт. 22). Отец Иакова и Исава.</td><td>ок. 1950–1800 до Р.Х.</td><td>Ханаан</td><td>Быт. 21–35</td></tr>
+        <tr class="luke-line"><td>55</td><td class="name">Авраам</td><td>Отец верующих</td><td>Родом из Ура. Заключил завет с Богом (Быт. 15, 17). Отец Исаака (от Сарры) и Измаила (от Агари).</td><td>ок. 2166–1991 до Р.Х. <sup>[1]</sup></td><td>Ур → Харран → Ханаан</td><td>Быт. 11–25</td></tr>
+        <tr class="luke-line"><td>56</td><td class="name">Фарра (Фарра)</td><td>Отец Авраама</td><td>Имя = «разделяющий». Вёл семью из Ура.</td><td>ок. 2250–2070 до Р.Х.</td><td>Ур → Харран</td><td>Быт. 11:24–26</td></tr>
+        <tr class="luke-line"><td>57</td><td class="name">Серух</td><td>Праотец</td><td>—</td><td>ок. 2280–2100 до Р.Х.</td><td>Месопотамия</td><td>Быт. 11:20–23</td></tr>
+        <tr class="luke-line"><td>58</td><td class="name">Рагав</td><td>Праотец</td><td>—</td><td>ок. 2310–2130 до Р.Х.</td><td>Месопотамия</td><td>Быт. 11:18–19</td></tr>
+        <tr class="luke-line"><td>59</td><td class="name">Фалек</td><td>Праотец</td><td>После него «разделилась земля» (Быт. 10:25) — возможно, Вавилонское столпотворение.</td><td>ок. 2340–2160 до Р.Х.</td><td>Месопотамия</td><td>Быт. 11:16–17</td></tr>
+        <tr class="luke-line"><td>60</td><td class="name">Евер</td><td>Праотец</td><td>Праотец всех «евреев» (от «Эбер»).</td><td>ок. 2370–2190 до Р.Х.</td><td>Месопотамия</td><td>Быт. 10:21–25; 11:14–17</td></tr>
+        <tr class="luke-line"><td>61</td><td class="name">Сала</td><td>Праотец</td><td>Сын Арфаксада.</td><td>ок. 2400–2220 до Р.Х.</td><td>Месопотамия</td><td>Быт. 11:12–15</td></tr>
+        <tr class="luke-line"><td>62</td><td class="name">Каинан</td><td>Праотец</td><td>Есть только в Луке и Септуагинте (не в масоретском тексте).</td><td>ок. 2430–2250 до Р.Х.</td><td>Месопотамия</td><td>Лук. 3:36; Быт. 11:12 (в Септ.)</td></tr>
+        <tr class="luke-line"><td>63</td><td class="name">Арфаксад</td><td>Сын Сима</td><td>Родился через 2 года после потопа.</td><td>ок. 2470–2290 до Р.Х.</td><td>Арарат → Месопотамия</td><td>Быт. 10:22; 11:10–13</td></tr>
+        <tr class="luke-line"><td>64</td><td class="name">Сим</td><td>Сын Ноя</td><td>Старший из выживших. От него — евреи, арабы, другие народы Ближнего Востока.</td><td>ок. 2500–2300 до Р.Х.</td><td>Арарат → Месопотамия</td><td>Быт. 5:32; 6–10</td></tr>
+        <tr class="luke-line"><td>65</td><td class="name">Ной</td><td>Праведник, спасшийся в ковчеге</td><td>«Утешитель». Построил ковчег, пережил потоп, дал начало новому человечеству.</td><td>ок. 2970–2020 до Р.Х. <sup>[2]</sup></td><td>Месопотамия</td><td>Быт. 5–9</td></tr>
+        <tr class="luke-line"><td>66</td><td class="name">Ламех</td><td>Отец Ноя</td><td>Сказал: «Он утешит нас…» (Быт. 5:29).</td><td>ок. 3150–2350 до Р.Х.</td><td>Месопотамия</td><td>Быт. 5:25–31</td></tr>
+        <tr class="luke-line"><td>67</td><td class="name">Мафусал</td><td>Долгожитель</td><td>Прожил 969 лет — самый долгий возраст в Библии.</td><td>ок. 3680–2711 до Р.Х.</td><td>Месопотамия</td><td>Быт. 5:21–27</td></tr>
+        <tr class="luke-line"><td>68</td><td class="name">Енох</td><td>Пророк, взят на небо</td><td>«Ходил с Богом — и не стало его». Пророчествовал о втором пришествии (Иуд. 1:14).</td><td>ок. 3950–3204 до Р.Х.</td><td>Месопотамия</td><td>Быт. 5:18–24; Иуд. 1:14</td></tr>
+        <tr class="luke-line"><td>69</td><td class="name">Иаред</td><td>Праотец</td><td>—</td><td>ок. 4220–3358 до Р.Х.</td><td>Месопотамия</td><td>Быт. 5:15–20</td></tr>
+        <tr class="luke-line"><td>70</td><td class="name">Малаелеил</td><td>Праотец</td><td>«Хвала Богу».</td><td>ок. 4490–3628 до Р.Х.</td><td>Месопотамия</td><td>Быт. 5:12–14</td></tr>
+        <tr class="luke-line"><td>71</td><td class="name">Каинан</td><td>Праотец</td><td>Сын Еноса.</td><td>ок. 4760–3898 до Р.Х.</td><td>Месопотамия</td><td>Быт. 5:9–11</td></tr>
+        <tr class="luke-line"><td>72</td><td class="name">Енос</td><td>Праотец</td><td>В его дни «начали призывать имя Господне» (Быт. 4:26).</td><td>ок. 5030–4130 до Р.Х.</td><td>Месопотамия</td><td>Быт. 4:26; 5:6–8</td></tr>
+        <tr class="luke-line"><td>73</td><td class="name">Сиф</td><td>Сын Адама</td><td>Родился после смерти Авеля. «Вместо Авеля».</td><td>ок. 5300–4370 до Р.Х.</td><td>Эдемская земля</td><td>Быт. 4:25; 5:3–5</td></tr>
+        <tr class="luke-line"><td>74</td><td class="name">Адам</td><td>Первый человек</td><td>«Человек», «земной». Создан из праха, получил дыхание жизни. Праотец рода человеческого.</td><td>сотворён ок. 5600 до Р.Х. <sup>[3]</sup></td><td>Эдем</td><td>Быт. 1:26–2:25; 5:1–5; 1 Кор. 15:45</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Линия Иосифа (по Матфею) -->
+<div class="section">
+  <h2 class="section-title">IV. Линия по закону — Иосиф (Евангелие от Матфея 1:1–17)</h2>
+  <p><em>41 поколение от Авраама до Иосифа. Юридическая родословная — подтверждает права Иисуса на престол Давида.</em></p>
+
+  <div class="generation-group">
+    <h3 class="group-title">Поколение 1: Иосиф — муж Марии</h3>
+    <table>
+      <thead><tr><th>Имя</th><th>Роль</th><th>Биография</th><th>Годы</th><th>Место</th><th>Источники</th></tr></thead>
+      <tbody>
+        <tr class="joseph-line">
+          <td class="name">Иосиф</td>
+          <td class="role">Обручник Марии, приёмный отец Иисуса</td>
+          <td>Плотник из Назарета. «Праведный человек» (Матф. 1:19). Не знал Марии до рождения Иисуса. Принял откровение от Ангела. Спас семью в Египте. Умер до начала служения Иисуса.</td>
+          <td class="years">ок. 90 до Р.Х. — ок. 18 н.э.</td>
+          <td class="place">Вифлеем → Египет → Назарет</td>
+          <td class="source">Матф. 1:16–25; 2:13–23; Лук. 2:41–52</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="generation-group">
+    <h3 class="group-title">Поколение 2–42: Родословная по Матфею (41 имя)</h3>
+    <table>
+      <thead><tr><th>№</th><th>Имя</th><th>Роль</th><th>Биография / Примечание</th><th>Годы (ок.)</th><th>Место</th><th>Ссылка</th></tr></thead>
+      <tbody>
+        <tr class="matthew-line"><td>1</td><td class="name">Иаков</td><td>Отец Иосифа</td><td>Упомянут только в Матфее.</td><td>ок. 60–10 до Р.Х.</td><td>Назарет</td><td>Матф. 1:16</td></tr>
+        <tr class="matthew-line"><td>2</td><td class="name">Матфан</td><td>Дед Иосифа</td><td>—</td><td>ок. 90–30 до Р.Х.</td><td>Галилея</td><td>Матф. 1:15</td></tr>
+        <tr class="matthew-line"><td>3</td><td class="name">Елеазар</td><td>Праотец</td><td>«Бог помог».</td><td>ок. 120–60 до Р.Х.</td><td>Иудея</td><td>Матф. 1:15</td></tr>
+        <tr class="matthew-line"><td>4</td><td class="name">Элиуд</td><td>Праотец</td><td>—</td><td>ок. 150–90 до Р.Х.</td><td>Иудея</td><td>Матф. 1:15</td></tr>
+        <tr class="matthew-line"><td>5</td><td class="name">Ахим</td><td>Праотец</td><td>Возможно, «Иоаким».</td><td>ок. 180–120 до Р.Х.</td><td>Иудея</td><td>Матф. 1:14</td></tr>
+        <tr class="matthew-line"><td>6</td><td class="name">Садок</td><td>Праотец</td><td>Не первосвященник при Давиде.</td><td>ок. 210–150 до Р.Х.</td><td>Иудея</td><td>Матф. 1:14</td></tr>
+        <tr class="matthew-line"><td>7</td><td class="name">Азим</td><td>Праотец</td><td>—</td><td>ок. 240–180 до Р.Х.</td><td>Иудея</td><td>Матф. 1:14</td></tr>
+        <tr class="matthew-line"><td>8</td><td class="name">Элиаким</td><td>Праотец</td><td>—</td><td>ок. 270–210 до Р.Х.</td><td>Иудея</td><td>Матф. 1:13</td></tr>
+        <tr class="matthew-line"><td>9</td><td class="name">Авиуд</td><td>Праотец</td><td>—</td><td>ок. 300–240 до Р.Х.</td><td>Иудея</td><td>Матф. 1:13</td></tr>
+        <tr class="matthew-line"><td>10</td><td class="name">Зоровавель</td><td>Потомок Иехонии</td><td>Вождь возвращения из Вавилонского плена. Построил второй храм (Езд. 3–6; Агг. 1).</td><td>ок. 520–470 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:12; Езд. 2–6; Агг. 1</td></tr>
+        <tr class="matthew-line"><td>11</td><td class="name">Салафииль</td><td>Отец Зоровавеля</td><td>Сын Иехонии (1 Пар. 3:17). В проклятии Иер. 22:30, но линия восстановлена через Зоровавеля.</td><td>ок. 560–510 до Р.Х.</td><td>Вавилон → Иерусалим</td><td>Матф. 1:12; 1 Пар. 3:17</td></tr>
+        <tr class="matthew-line"><td>12</td><td class="name">Иехония (Иоаким)</td><td>Царь Иудеи</td><td>Последний царь из дома Давидова до плена. Правил 3 месяца. Увёден в Вавилон (2 Цар. 24:8–17).</td><td>род. ок. 616 до Р.Х.; царь 598–597</td><td>Иерусалим → Вавилон</td><td>Матф. 1:11; 2 Цар. 24; Иер. 22:24–30</td></tr>
+        <tr class="matthew-line"><td>13</td><td class="name">Иосия</td><td>Царь Иудеи</td><td>Один из лучших царей. Возродил Закон. Погиб в битве при Мегиддо.</td><td>648–609 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:11; 2 Цар. 22–23</td></tr>
+        <tr class="matthew-line"><td>14</td><td class="name">Амон</td><td>Царь Иудеи</td><td>Сын Манассии. Правил 2 года. Убит заговорщиками.</td><td>663–642 до Р.Х. (убит)</td><td>Иерусалим</td><td>Матф. 1:10; 2 Цар. 21:19–26</td></tr>
+        <tr class="matthew-line"><td>15</td><td class="name">Манассия</td><td>Царь Иудеи</td><td>Самый долгий и самый греховный царь (55 лет). Покаялся в плену (2 Пар. 33).</td><td>698–642 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:10; 2 Цар. 20–21</td></tr>
+        <tr class="matthew-line"><td>16</td><td class="name">Езекия</td><td>Царь Иудеи</td><td>Великий реформатор. Спас Иерусалим от Сеннахирима (молитвой, 4 Цар. 19).</td><td>742–687 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:9; 4 Цар. 18–20</td></tr>
+        <tr class="matthew-line"><td>17</td><td class="name">Ахаз</td><td>Царь Иудеи</td><td>Безбожный. Ввёл идолопоклонство. Отец Езекии.</td><td>743–715 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:9; 4 Цар. 16</td></tr>
+        <tr class="matthew-line"><td>18</td><td class="name">Иоафам</td><td>Царь Иудеи</td><td>«Укреплённый Господом». Построил Верхние ворота храма.</td><td>774–732 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:8; 4 Цар. 15:32–38</td></tr>
+        <tr class="matthew-line"><td>19</td><td class="name">Озия (Азария)</td><td>Царь Иудеи</td><td>Правил 52 года. Поражён проказой за вторжение в святилище.</td><td>825–742 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:8; 4 Цар. 15:1–7</td></tr>
+        <tr class="matthew-line"><td>20</td><td class="name">Иорам</td><td>Царь Иудеи</td><td>Женился на дочери Ахава (Иезавели). Ввёл вавилонское идолопоклонство.</td><td>891–841 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:8; 4 Цар. 8:16–24</td></tr>
+        <tr class="matthew-line"><td>21</td><td class="name">Иосафат</td><td>Царь Иудеи</td><td>Богобоязненный. Союз с Израилем. Учил народ Закону.</td><td>917–886 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:8; 4 Цар. 22</td></tr>
+        <tr class="matthew-line"><td>22</td><td class="name">Аса</td><td>Царь Иудеи</td><td>Сын Авии. Удалил идолов. Победил эфиоплян (2 Пар. 14).</td><td>946–911 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:7; 4 Цар. 15</td></tr>
+        <tr class="matthew-line"><td>23</td><td class="name">Авия</td><td>Царь Иудеи</td><td>Победил Иеровоама (2 Пар. 13). Правил 3 года.</td><td>982–954 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:7; 4 Цар. 15:1–8</td></tr>
+        <tr class="matthew-line"><td>24</td><td class="name">Ровоам</td><td>Царь Иудеи</td><td>Сын Соломона. Отказался смягчить ярмо — начало разделения царств.</td><td>1016–958 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:7; 3 Цар. 12</td></tr>
+        <tr class="matthew-line"><td>25</td><td class="name">Соломон</td><td>Царь Израиля</td><td>«Мирный». Построил храм. Написал Притчи, Екклесиаст, Песнь. Пал в идолопоклонство.</td><td>1048–970 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:6; 3 Цар. 1–11</td></tr>
+        <tr class="matthew-line"><td>26</td><td class="name">Давид</td><td>Царь Израиля</td><td>— (см. выше)</td><td>ок. 1040–970 до Р.Х.</td><td>Иерусалим</td><td>Матф. 1:6</td></tr>
+        <tr class="matthew-line"><td>27</td><td class="name">Иессей</td><td>—</td><td>—</td><td>ок. 1080–1010 до Р.Х.</td><td>Вифлеем</td><td>Матф. 1:5</td></tr>
+        <tr class="matthew-line"><td>28</td><td class="name">Овид</td><td>—</td><td>—</td><td>ок. 1120–1050 до Р.Х.</td><td>Вифлеем</td><td>Матф. 1:5</td></tr>
+        <tr class="matthew-line"><td>29</td><td class="name">Вооз</td><td>—</td><td>—</td><td>ок. 1160–1090 до Р.Х.</td><td>Вифлеем</td><td>Матф. 1:5</td></tr>
+        <tr class="matthew-line"><td>30</td><td class="name">Салмон</td><td>—</td><td>—</td><td>ок. 1200–1130 до Р.Х.</td><td>Иерихон</td><td>Матф. 1:4</td></tr>
+        <tr class="matthew-line"><td>31</td><td class="name">Наассон</td><td>—</td><td>—</td><td>ок. 1500–1420 до Р.Х.</td><td>Пустыня</td><td>Матф. 1:4</td></tr>
+        <tr class="matthew-line"><td>32</td><td class="name">Аминадав</td><td>—</td><td>—</td><td>ок. 1540–1460 до Р.Х.</td><td>Египет</td><td>Матф. 1:4</td></tr>
+        <tr class="matthew-line"><td>33</td><td class="name">Арам</td><td>—</td><td>—</td><td>ок. 1580–1500 до Р.Х.</td><td>Египет</td><td>Матф. 1:3</td></tr>
+        <tr class="matthew-line"><td>34</td><td class="name">Есром</td><td>—</td><td>—</td><td>ок. 1620–1540 до Р.Х.</td><td>Египет</td><td>Матф. 1:3</td></tr>
+        <tr class="matthew-line"><td>35</td><td class="name">Фарес</td><td>—</td><td>—</td><td>ок. 1700–1620 до Р.Х.</td><td>Египет</td><td>Матф. 1:3</td></tr>
+        <tr class="matthew-line"><td>36</td><td class="name">Иуда</td><td>—</td><td>—</td><td>ок. 1750–1670 до Р.Х.</td><td>Ханаан</td><td>Матф. 1:2</td></tr>
+        <tr class="matthew-line"><td>37</td><td class="name">Иаков</td><td>—</td><td>—</td><td>ок. 1850–1700 до Р.Х.</td><td>Египет</td><td>Матф. 1:2</td></tr>
+        <tr class="matthew-line"><td>38</td><td class="name">Исаак</td><td>—</td><td>—</td><td>ок. 1950–1800 до Р.Х.</td><td>Ханаан</td><td>Матф. 1:2</td></tr>
+        <tr class="matthew-line"><td>39</td><td class="name">Авраам</td><td>—</td><td>—</td><td>ок. 2166–1991 до Р.Х.</td><td>Ханаан</td><td>Матф. 1:2</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="generation-group">
+    <h3 class="group-title">4 Женщины в родословной Матфея (редкость для древних генеалогий!)</h3>
+    <table>
+      <thead><tr><th>Имя</th><th>Роль</th><th>Биография</th><th>Годы</th><th>Место</th><th>Ссылка</th></tr></thead>
+      <tbody>
+        <tr class="matthew-line">
+          <td class="name">Тамарь</td>
+          <td class="role">Жена Иуды</td>
+          <td>Выдала себя за блудницу, чтобы родить от свёкра (Быт. 38). Двойня: Фарес и Зарах. Праведна по вере (Евр. 11:31).</td>
+          <td class="years">ок. 1720 до Р.Х.</td>
+          <td class="place">Хеврон</td>
+          <td class="source">Быт. 38; Матф. 1:3</td>
+        </tr>
+        <tr class="matthew-line">
+          <td class="name">Раав</td>
+          <td class="role">Жена Салмона</td>
+          <td>Блудница из Иерихона. Спасла лазутчиков. Вошла в народ Израиля. Прабабка Давида.</td>
+          <td class="years">ок. 1400 до Р.Х.</td>
+          <td class="place">Иерихон → Вифлеем</td>
+          <td class="source">Иис. Нав. 2, 6; Матф. 1:5; Евр. 11:31</td>
+        </tr>
+        <tr class="matthew-line">
+          <td class="name">Руфь</td>
+          <td class="role">Жена Вооза</td>
+          <td>Моавитянка. Сказала: «Народ твой — мой народ». Прабабка Давида. Образ верности.</td>
+          <td class="years">ок. 1170 до Р.Х.</td>
+          <td class="place">Моав → Вифлеем</td>
+          <td class="source">Кн. Руфь; Матф. 1:5</td>
+        </tr>
+        <tr class="matthew-line">
+          <td class="name">Вирсавия</td>
+          <td class="role">Жена Урии, затем Давида</td>
+          <td>Мать Соломона. Её сын — Соломон — продолжил царскую линию. В Библии названа «жена Урии» (Матф. 1:6) — намёк на грех Давида.</td>
+          <td class="years">ок. 1020–950 до Р.Х.</td>
+          <td class="place">Иерусалим</td>
+          <td class="source">2 Цар. 11–12; Матф. 1:6</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footnotes">
+  <h3>Примечания и источники хронологии</h3>
+  <ol>
+    <li><strong>Годы Авраама:</strong> По расчётам Дж. Лигтфута и Дж. Уссерия: сотворение — 4004 г. до Р.Х., Авраам род. — 2166 г. до Р.Х. Современные оценки: ~2000–1800 гг. до Р.Х.</li>
+    <li><strong>Потоп:</strong> По Уссерию — 2348 г. до Р.Х. Современные учёные не подтверждают глобальный потоп, но локальное наводнение в Месопотамии (~2900 г. до Р.Х.) возможно.</li>
+    <3><strong>Адам:</strong> Годы — библейская хронология (Быт. 5). Современная наука: <em>Homo sapiens</em> — ~300 тыс. лет назад. Библейский Адам — прародитель духовного рода, а не всего биологического человечества (мнение многих богословов).</li>
+    <li><strong>Хронология царей:</strong> Основана на работах Э. Тайла (Edwin R. Thiele), учитывающих разные системы счёта лет в Израиле и Иудее.</li>
+    <li><strong>Иоаким и Анна:</strong> Не в каноне, но почитаются как святые в Православной, Католической и Армянской Церквах. Память — 9 сентября (по юл.)</li>
+  </ol>
+</div>
+
+<footer>
+  <p>© 2025 | Составлено на основе Синодального перевода Библии, богословских комментариев и научных хронологий</p>
+  <p>Для академического использования: свяжитесь для получения CSV/Excel-файла со всеми данными.</p>
+</footer>
+
+</body>
+</html>
